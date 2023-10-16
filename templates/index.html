@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}Todo List | Home {% endblock %}
+
+{% block content %}
+    <div class="todo-container">
+        <h3 class="todo-title">Create a task</h3>
+
+        <!-- Todo Item Form -->
+        <form action="/create_task" method="POST" class="todo-form">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" placeholder="Task title" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" placeholder="Task description" class="form-control"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Create Task</button>
+        </form>
+
+        <br><br>
+        <h3 class="todo-title">My Todo List</h3>
+        {% if tasks|length %}
+            {% set ns = namespace(c = 1) %}
+            {% for task in tasks %}
+            <!-- Todo Item -->
+                <div class="todo-item">
+                    <!--<input type="checkbox" class="todo-checkbox">-->
+                    <div class="todo-info">
+                        <h3 class="todo-item-title">{{ ns.c }}. {{ task[1] }}</h3>
+                        <p class="todo-item-description">{{ task[2] }}</p>
+                    </div>
+                    <div class="task-buttons">
+                        <!--<button class="btn btn-blue">Edit</button>-->
+                        <form action="/ready" method="POST"><input type="hidden" name="task_id" value="{{task[0]}}"><button class="btn btn-green" type="submit">Done</button></form>
+                    </div>
+                </div>
+                {% set ns.c = ns.c + 1 %}
+            {% endfor %}
+        {% else %}
+            <div class="todo-item">
+                <div class="todo-info">
+                    <h3 class="todo-item-title">Your list is empty</h3>
+                    <p class="todo-item-description">But you can add some new tasks. Just click "Create Task" button.</p>
+                </div>
+            </div>
+        {% endif %}
+
+
+    </div>
+{% endblock %}

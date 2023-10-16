@@ -1,0 +1,295 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url(../Fonts/WorkSans-Regular.ttf);
+}
+
+/* styles.css */
+body {
+    font-family: myFirstFont;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2; /* Light Gray */
+}
+
+/* Header Styles */
+header {
+    background-color: #F0E68C; /* Light Orange */
+    color: #333; /* Dark Gray */
+    padding: 10px 20px; /* Increased padding for more space on the right */
+    text-align: right; /* Align header to the right */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add box shadow to header */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333; /* Dark Gray */
+    transition: color 0.3s; /* Add color transition for smooth hover effect */
+}
+
+/* Hover effect for links in the header */
+nav a:hover {
+    color: #007bff; /* Change link color to Primary Blue on hover */
+}
+
+/* Todo List Styles */
+.todo-container {
+    background-color: #fff; /* White */
+    margin: 50px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.todo-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.todo-item {
+    margin: 20px 20px;
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    border-bottom: 1px solid #ccc; /* Add gray border line to each task item */
+    padding: 10px 0; /* Add padding above and below the task item */
+}
+
+.todo-checkbox {
+    margin-right: 10px;
+}
+
+.todo-info {
+    flex-grow: 1;
+}
+
+.todo-item-title {
+    font-size: 18px;
+    margin: 0;
+}
+
+.todo-item-description {
+    font-size: 14px;
+    color: #666; /* Medium Gray */
+    margin-top: 5px;
+}
+
+/* Todo Form Styles */
+.todo-form {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff; /* White */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    resize: none;
+    width: 98%;
+    padding: 10px 8px; /* Increased padding on left side */
+    border: 1px solid #ccc; /* Light Gray */
+    border-radius: 5px;
+}
+
+textarea.form-control {
+    height: 100px;
+}
+
+.btn-primary {
+    background-color: #007bff; /* Primary Blue */
+    color: #fff; /* White */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker Blue on Hover */
+}
+
+/* Feedback Page Styles */
+.feedback-container {
+    max-width: 400px; /* Adjust the maximum width as needed */
+    margin: 100px auto; /* Center the container horizontally */
+    background-color: #fff; /* White */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center; /* Center the title */
+}
+
+.feedback-form .form-group {
+    margin-bottom: 20px;
+}
+
+.feedback-form label {
+    display: block;
+    font-weight: bold;
+}
+
+.feedback-form .form-control {
+    width: 94.5%;
+    padding: 10px;
+    border: 1px solid #ccc; /* Light Gray */
+    border-radius: 5px;
+}
+
+.feedback-form textarea.form-control {
+    height: 100px;
+}
+
+.feedback-form .btn-primary {
+    background-color: #007bff; /* Primary Blue */
+    color: #fff; /* White */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.feedback-form .btn-primary:hover {
+    background-color: #0056b3; /* Darker Blue on Hover */
+}
+
+/* Button Styles */
+.btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.btn-blue {
+    background-color: #007bff; /* Primary Blue */
+    color: #fff; /* White */
+}
+
+.btn-green {
+    background-color: #28a745; /* Success Green */
+    color: #fff; /* White */
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker Blue on Hover */
+}
+
+.btn-green:hover {
+    background-color: #218838; /* Darker Green on Hover */
+}
+
+/* Error Page Styles */
+.error-container {
+    text-align: center;
+    margin: 100px auto; /* Center the container vertically and horizontally */
+    max-width: 400px; /* Adjust the maximum width as needed */
+    background-color: #fff; /* White */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.error-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ff0000; /* Red for error text */
+}
+
+.error-message {
+    font-size: 16px;
+    color: #666; /* Medium Gray for message */
+}
+
+/* Button Styles */
+.btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s, box-shadow 0.3s; /* Add box-shadow transition */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Add box shadow */
+}
+
+.btn-blue {
+    background-color: #007bff; /* Primary Blue */
+    color: #fff; /* White */
+}
+
+.btn-blue:hover {
+    background-color: #0056b3; /* Darker Blue on Hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+/* Submit Feedback Page Styles */
+.submit-feedback-container {
+    text-align: center; /* Center text horizontally */
+    margin: 100px auto; /* Center the container vertically and horizontally */
+    max-width: 400px; /* Adjust the maximum width as needed */
+    background-color: #fff; /* White */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.submit-feedback-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333; /* Dark Gray */
+}
+
+.submit-feedback-message {
+    font-size: 16px;
+    color: #666; /* Medium Gray */
+}
+
+.btn-blue {
+    background-color: #007bff; /* Primary Blue */
+    color: #fff; /* White */
+}
+
+.btn-blue:hover {
+    background-color: #0056b3; /* Darker Blue on Hover */
+}
+
+/* Add more styles as needed for your todo list */
